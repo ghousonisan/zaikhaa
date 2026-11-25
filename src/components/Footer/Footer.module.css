@@ -1,0 +1,228 @@
+.wrap {
+  position: relative;
+  isolation: isolate;
+}
+
+.featuresBand {
+  position: relative;
+  z-index: 2;
+  margin: 0 48px -70px;
+}
+
+.featuresInner {
+  background: var(--gradient-primary-rev);
+  border: 10px solid var(--color-primary);
+  border-radius: 32px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 28px 40px;
+}
+
+/* Contact uses a white card rather than the orange band */
+.featuresLight {
+  background: var(--color-white);
+  border-color: var(--color-white);
+  box-shadow: 0px 4px 14.7px rgba(254, 177, 105, 0.35);
+}
+
+.featuresLight .featureTitle {
+  color: var(--color-text-heading);
+}
+
+.featuresLight .featureText {
+  color: var(--color-text-body);
+}
+
+.featuresLight .featureIcon {
+  border-color: rgba(254, 177, 105, 0.3);
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 220px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.featureIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(254, 177, 105, 0.3);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.featureIcon img {
+  width: 100%;
+  height: 100%;
+}
+
+.featureTitle {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.featureText {
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.footer {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: var(--gradient-cream);
+  border-radius: 50px 50px 0 0;
+  padding: 100px 48px 60px;
+}
+
+/* when the page supplies its own band, the footer keeps its normal top padding */
+.footerFlush {
+  padding-top: 82px;
+}
+
+.footerInner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerTop {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: space-between;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 360px;
+}
+
+.brandName {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  background: linear-gradient(90deg, #ff6b1a 0%, #ffceb3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.brandText {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: -12px;
+}
+
+.hoursCol,
+.socialCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--color-text-heading);
+}
+
+.colHeading {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-text-heading);
+}
+
+.hoursText {
+  font-size: 16px;
+}
+
+.socialRow {
+  display: flex;
+  gap: 16px;
+}
+
+.socialBtn {
+  width: 33px;
+  height: 33px;
+  border-radius: 9px;
+  background: var(--color-white);
+  border: 0.5px solid #ebeff6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+}
+
+.socialBtn img {
+  width: 100%;
+  height: 100%;
+}
+
+.linksRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.linksCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 140px;
+}
+
+.linksCol ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.linksCol li a {
+  font-size: 16px;
+  color: var(--color-text-body);
+  transition: color 0.15s ease;
+}
+
+.linksCol li a:hover {
+  color: var(--color-primary);
+}
+
+.watermark {
+  position: relative;
+  z-index: 0;
+  margin: 60px 0 -40px;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(60px, 14vw, 200px);
+  line-height: 1;
+  background: linear-gradient(90deg, rgba(255, 107, 26, 0.24) 0%, rgba(255, 206, 179, 0.24) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .featuresBand {
+    margin: 0 20px -70px;
+  }
+
+  .footer {
+    padding: 100px 20px 40px;
+  }
+
+  .footerTop {
+    gap: 40px;
+  }
+}

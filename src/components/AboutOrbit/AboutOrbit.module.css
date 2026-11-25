@@ -1,0 +1,110 @@
+/*
+ * Figma geometry: a 423.597 x 481 frame whose ring group is rotated 90deg, so
+ * that group's own box is 481 wide x 423.597 tall. Plates sit at the design's
+ * offsets inside it; the arc label and centre dish are drawn upright on top.
+ *
+ * Nothing is clipped here — the hero section does the clipping, exactly as the
+ * design does, so the plates that sit above the frame stay visible.
+ */
+
+.viewport {
+  --scale: 1;
+  position: relative;
+  width: 100%;
+  /* reserves the height the design shows before the hero clips it */
+  height: calc(293px * var(--scale));
+  pointer-events: none;
+}
+
+.frame {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 423.597px;
+  height: 481px;
+  transform: translateX(-50%) scale(var(--scale));
+  transform-origin: top center;
+}
+
+.rotated {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner {
+  position: relative;
+  flex: none;
+  width: 481px;
+  height: 423.597px;
+  transform: rotate(90deg);
+}
+
+.orbit {
+  position: absolute;
+  left: -62.565px;
+  top: -62.565px;
+  width: 548.727px;
+  height: 548.727px;
+}
+
+.ring {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 548.727px;
+  height: 548.727px;
+}
+
+.orbit .plate {
+  position: absolute;
+  max-width: none;
+}
+
+.storyArc {
+  position: absolute;
+  left: 50%;
+  top: 48px;
+  width: 400.714px;
+  height: 400.714px;
+  max-width: none;
+  transform: translateX(-50%);
+}
+
+.centerSlot {
+  position: absolute;
+  left: 211.66px;
+  top: 212.21px;
+  width: 291.647px;
+  height: 292.735px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* counter-rotated so the centre dish reads upright */
+.centerSlot .centerPlate {
+  flex: none;
+  transform: rotate(-90deg);
+}
+
+@media (max-width: 1100px) {
+  .viewport {
+    --scale: 0.88;
+  }
+}
+
+@media (max-width: 860px) {
+  .viewport {
+    --scale: 0.7;
+  }
+}
+
+@media (max-width: 620px) {
+  .viewport {
+    --scale: 0.52;
+  }
+}

@@ -1,0 +1,155 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 96px 140px 54px;
+  background: linear-gradient(90deg, #fff6e7 0%, #ffffff 100%);
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 520px;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-text-body);
+}
+
+.breadcrumb span {
+  color: #f7decf;
+}
+
+.breadcrumb .current {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 46px;
+  color: var(--color-text-heading);
+}
+
+.subtitle {
+  font-size: 15px;
+}
+
+.heroImages {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 386px;
+  max-width: 100%;
+}
+
+.heroImg1,
+.heroImg2,
+.heroImg3 {
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: var(--shadow-card);
+}
+
+.heroImg1 {
+  width: 55%;
+  height: 160px;
+  transform: rotate(8deg);
+}
+
+.heroImg2 {
+  width: 45%;
+  height: 120px;
+  transform: rotate(-6deg);
+  margin-left: -30px;
+}
+
+.heroImg3 {
+  display: none;
+}
+
+.tableSection {
+  display: flex;
+  justify-content: center;
+  padding: 0 48px 90px;
+  margin-top: -54px;
+}
+
+.tableCard {
+  width: 100%;
+  max-width: 1160px;
+  background: var(--color-white);
+  border: 17px solid var(--color-primary);
+  border-radius: 32px;
+  box-shadow: var(--shadow-card);
+  padding: 40px 49px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.group {
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.groupHeader {
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 12px;
+}
+
+.dishList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dishRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: linear-gradient(90deg, #f9f9f9 0%, #ffffff 100%);
+  border-radius: 12px;
+  padding: 8px 20px;
+  font-size: 18px;
+  color: var(--color-text-heading);
+}
+
+.price {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 48px 20px 40px;
+  }
+
+  .tableSection {
+    padding: 0 20px 60px;
+  }
+
+  .tableCard {
+    border-width: 8px;
+    padding: 28px 22px;
+  }
+}

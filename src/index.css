@@ -1,0 +1,90 @@
+:root {
+  --color-primary: #ff6b1a;
+  --color-primary-light: #feb169;
+  --color-primary-soft: #ffa754;
+  --color-text-heading: #393939;
+  --color-text-body: #555555;
+  --color-text-muted: #717171;
+  --color-text-faint: #8e8e8e;
+  --color-border: #c2c2c2;
+  --color-border-soft: #ffe9cb;
+  --color-bg-cream: #fff6e7;
+  --color-bg-cream-2: #ffedce;
+  --color-white: #ffffff;
+
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Outfit", sans-serif;
+
+  --gradient-primary: linear-gradient(90deg, #ff6b1a 0%, #feb169 100%);
+  --gradient-primary-rev: linear-gradient(270deg, #ff8a4a 0%, #ffb34f 100%);
+  --gradient-cream: linear-gradient(
+    180deg,
+    #ffedce 0%,
+    #ffffff 100%
+  );
+
+  --shadow-card: 0px 4px 7.35px rgba(254, 177, 105, 0.35);
+  --shadow-header: 0px 2px 4px rgba(0, 0, 0, 0.14);
+
+  --container-width: 1440px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-body);
+  background: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page {
+  flex: 1;
+}

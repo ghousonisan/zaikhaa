@@ -1,0 +1,767 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 73px;
+}
+
+/* ---------- shared ---------- */
+
+.sectionHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  max-width: 609px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.3;
+  color: var(--color-text-heading);
+  text-align: center;
+}
+
+.sectionTitleLeft {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.3;
+  color: var(--color-text-heading);
+}
+
+.sectionText {
+  font-size: 20px;
+  line-height: 1.45;
+  color: var(--color-text-body);
+}
+
+.highlight {
+  background: linear-gradient(90deg, #ff7930 0%, #feb169 36%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  border-radius: 12px;
+  padding: 12px 26px;
+  font-size: 16px;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.secondaryBtn:hover {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  border-color: transparent;
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  /* the orbit is absolutely placed at the design's offset, so the hero keeps
+     the height the design gives it and clips the rest of the ring */
+  height: 685px;
+  padding: 60px 120px 0;
+  background:
+    linear-gradient(0deg, #ffffff 10.557%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(180deg, #ffedce 0%, #ffffff 100%);
+}
+
+.heroOrbit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 450px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.badge {
+  background: linear-gradient(90deg, #ff7930 0%, #b75823 100%);
+  border: 1px solid #fdcdb4;
+  border-radius: 52px;
+  padding: 4px 19px;
+  font-size: 12px;
+  color: #ffe3d2;
+  margin-bottom: -4px;
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(32px, 4.4vw, 48px);
+  line-height: 1.25;
+  color: var(--color-text-heading);
+  max-width: 518px;
+}
+
+.heroText {
+  font-size: 20px;
+  line-height: 1.45;
+  color: var(--color-text-body);
+  max-width: 620px;
+}
+
+/* ---------- what makes Zaikhaas special ---------- */
+
+.whyWrap {
+  padding: 0 120px;
+}
+
+.whyCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 253, 252, 0.6);
+  border: 12px solid #ffece0;
+  border-radius: 32px;
+  box-shadow: 0px 4px 14.7px rgba(254, 177, 105, 0.35);
+  padding: 48px 39px;
+  text-align: center;
+}
+
+.whyGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 36px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.whyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+  width: 234px;
+  text-align: center;
+}
+
+.whyIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: 2px solid rgba(254, 177, 105, 0.3);
+  border-radius: 10px;
+}
+
+.whyIcon img {
+  width: 24px;
+  height: 24px;
+}
+
+.whyTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text-heading);
+}
+
+.whyText {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-body);
+}
+
+/* ---------- brand story ---------- */
+
+.brandStory {
+  border-top: 1px solid var(--color-border-soft);
+  border-bottom: 1px solid var(--color-border-soft);
+  padding: 10px 120px;
+  background: linear-gradient(248deg, rgba(255, 220, 165, 0.8) 5%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+.brandStoryInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 83px 103px;
+  min-height: 556px;
+}
+
+.brandStoryCopy {
+  flex: 1 1 400px;
+  min-width: min(400px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+}
+
+.brandStoryHead {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.brandStoryLead {
+  font-size: 20px;
+  line-height: 1.45;
+  color: var(--color-text-body);
+}
+
+.brandStoryBody {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.brandStorySubhead {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--color-text-heading);
+}
+
+.brandStoryBody p {
+  font-size: 22px;
+  line-height: 1.45;
+  color: var(--color-text-body);
+}
+
+/* ---------- journey ---------- */
+
+.journey {
+  padding: 0 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 73px;
+}
+
+.journeyHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.journeyHeadText {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 560px;
+}
+
+.journeyStat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 11px;
+}
+
+.statNum {
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 1;
+  background: linear-gradient(90deg, #ff6b1a 0%, #ffdecc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.statLabel {
+  font-size: 18px;
+  color: var(--color-text-heading);
+}
+
+.journeyGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.journeyCard {
+  flex: 1 1 260px;
+  max-width: 284px;
+  height: 388px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 28px;
+  padding: 10px 12px;
+  background: linear-gradient(174deg, rgba(255, 220, 165, 0.8) 12%, rgba(255, 255, 255, 0.8) 92%);
+}
+
+.journeyInner {
+  position: relative;
+  flex: 1 1 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 20px;
+  padding: 0 13px 15px;
+}
+
+.journeyImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* white scrim so the caption stays readable over the photo */
+.journeyFade {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(0deg, #ffffff 7%, rgba(255, 255, 255, 0) 45%);
+}
+
+.journeyCaption {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+  width: 100%;
+}
+
+.journeyStep {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 36px;
+  padding: 8px 16px;
+  border-radius: 11px;
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  font-size: 16px;
+}
+
+.journeyTitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-text-heading);
+}
+
+/* ---------- food philosophy ---------- */
+
+.philosophy {
+  border-top: 1px solid var(--color-border-soft);
+  border-bottom: 1px solid var(--color-border-soft);
+  padding: 82px 120px;
+  background: linear-gradient(0deg, #ffffff 0%, #fff5e9 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.philosophyHead {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.philosophyBody {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 123px;
+}
+
+.philosophyOrbit {
+  position: relative;
+  width: 327px;
+  height: 327px;
+  flex-shrink: 0;
+}
+
+/* the group is rotated a quarter turn in the design; the plate and the
+   ingredients are counter-rotated so they sit upright */
+.philosophyRotator {
+  position: absolute;
+  inset: 0;
+  transform: rotate(90deg);
+}
+
+.philosophyRing {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 327px;
+  height: 327px;
+  transform: translate(-50%, -50%);
+}
+
+.philosophyArc {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 400px;
+  height: 400px;
+  max-width: none;
+  transform: translate(-50%, -50%);
+}
+
+.spiceSlot {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+}
+
+.spiceSlot .spice {
+  transform: rotate(-90deg);
+}
+
+.philosophyPlateSlot {
+  position: absolute;
+  left: calc(50% - 0.5px);
+  top: calc(50% - 0.5px);
+  width: 240px;
+  height: 242px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.philosophyPlateSlot .philosophyPlate {
+  transform: rotate(-90deg);
+}
+
+.philosophyCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  width: 620px;
+  max-width: 100%;
+  min-height: 185px;
+  border: 5px solid var(--color-border-soft);
+  border-radius: 23px;
+  padding: 10px 32px;
+  background: linear-gradient(243deg, rgba(255, 220, 165, 0.08) 5%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+.philosophyCardTitle {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--color-text-heading);
+}
+
+.philosophyCardText {
+  font-size: 20px;
+  line-height: 1.45;
+  color: var(--color-text-body);
+}
+
+/* ---------- special dishes ---------- */
+
+.specials {
+  padding: 0 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.filterBtn {
+  border: 1px solid #ff7930;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #ff7930;
+  background: var(--color-white);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.filterBtn:hover {
+  background: #fff1e8;
+}
+
+.filterActive,
+.filterActive:hover {
+  background: #ff7930;
+  color: var(--color-white);
+}
+
+.productGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.productCard {
+  width: 285px;
+  background: var(--color-white);
+  border: 1.743px solid #fde1c7;
+  border-radius: 21px;
+  padding: 17.431px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.productImg {
+  position: relative;
+  width: 100%;
+  height: 279px;
+  border-radius: 10.459px;
+  overflow: hidden;
+  background: #fffbf5;
+  margin-bottom: 14px;
+}
+
+.productImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.newBadge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #ff6b1a 0%, #ffbf6c 100%);
+  color: var(--color-white);
+  font-size: 10.459px;
+  font-weight: 500;
+  padding: 5.229px 13.945px;
+  border-radius: 10.459px 20.917px 20.917px 10.459px;
+}
+
+.productCategory {
+  font-size: 10.459px;
+  color: #da8a22;
+}
+
+.productName {
+  font-size: 13.945px;
+  color: var(--color-text-heading);
+}
+
+.productPrice {
+  font-size: 15.688px;
+  font-weight: 500;
+  color: var(--color-text-heading);
+}
+
+/* ---------- franchise CTA ---------- */
+
+.ctaWrap {
+  position: relative;
+  z-index: 2;
+  padding: 0 120px;
+  /* overlaps the footer, as the design does */
+  margin-bottom: -62px;
+}
+
+.ctaCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background: var(--color-white);
+  border: 17px solid var(--color-primary);
+  border-radius: 32px;
+  box-shadow: var(--shadow-card);
+  padding: 40px 49px;
+  text-align: center;
+}
+
+.ctaText {
+  font-size: 20px;
+  line-height: 1.45;
+  color: var(--color-text-body);
+  max-width: 650px;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  border-radius: 12px;
+  padding: 12px 26px;
+  font-size: 16px;
+}
+
+.ctaBtn img {
+  width: 24px;
+  height: 24px;
+}
+
+.ctaBtn:hover {
+  opacity: 0.92;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 1200px) {
+  .hero,
+  .whyWrap,
+  .brandStory,
+  .journey,
+  .philosophy,
+  .specials,
+  .ctaWrap {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .hero {
+    height: 640px;
+  }
+
+  .heroOrbit {
+    top: 414px;
+  }
+
+  .brandStoryInner,
+  .philosophyBody {
+    gap: 48px;
+    justify-content: center;
+  }
+
+  .journeyCard {
+    max-width: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .brandStoryBody p {
+    font-size: 18px;
+  }
+
+  .sectionTitle,
+  .sectionTitleLeft {
+    font-size: 26px;
+  }
+
+  .sectionText,
+  .heroText,
+  .brandStoryLead,
+  .philosophyCardText,
+  .ctaText {
+    font-size: 17px;
+  }
+
+  .hero {
+    height: 560px;
+  }
+
+  .heroOrbit {
+    top: 345px;
+  }
+
+  .journeyHead {
+    align-items: flex-start;
+  }
+
+  .journeyStat {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .about {
+    gap: 48px;
+  }
+
+  .hero,
+  .whyWrap,
+  .brandStory,
+  .journey,
+  .philosophy,
+  .specials,
+  .ctaWrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero {
+    height: 520px;
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+
+  .heroOrbit {
+    top: 320px;
+  }
+
+  .whyCard,
+  .ctaCard {
+    border-width: 8px;
+    padding: 32px 24px;
+  }
+
+  .whyGrid {
+    justify-content: center;
+  }
+
+  .philosophy {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    gap: 48px;
+  }
+
+  .philosophyCard {
+    padding: 20px;
+  }
+
+  .productCard {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .journeyCard {
+    flex: 1 1 100%;
+    height: 340px;
+  }
+}
+
+@media (max-width: 560px) {
+  .philosophyOrbit {
+    transform: scale(0.8);
+    transform-origin: center;
+    margin: -32px 0;
+  }
+
+  .whyItem {
+    width: 100%;
+    max-width: 280px;
+  }
+}

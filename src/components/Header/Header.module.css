@@ -1,0 +1,184 @@
+.header {
+  position: relative;
+  z-index: 50;
+}
+
+.banner {
+  background: var(--gradient-primary-rev);
+  padding: 12px 10px;
+  text-align: center;
+}
+
+.banner p {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-white);
+}
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: var(--color-white);
+  box-shadow: var(--shadow-header);
+  padding: 18px 48px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+/* the source logo file has wide transparent padding, so it is cropped to its
+   artwork using the same frame Figma applies */
+.logoFrame {
+  position: relative;
+  display: block;
+  width: 122px;
+  height: 48.34px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.logoFrame img {
+  position: absolute;
+  left: -3.3%;
+  top: -91.67%;
+  width: 106.6%;
+  height: 269.05%;
+  max-width: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.navLink {
+  padding: 8px 16px;
+  font-size: 16px;
+  color: var(--color-text-body);
+  white-space: nowrap;
+  border-radius: 8px;
+  transition: color 0.15s ease;
+}
+
+.navLink:hover,
+.navLink.active {
+  color: var(--color-primary);
+}
+
+.dropdownWrap {
+  position: relative;
+}
+
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: var(--color-text-body);
+}
+
+.dropdownTrigger:hover {
+  color: var(--color-primary);
+}
+
+.arrow,
+.arrowOpen {
+  width: 16px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  background: var(--color-white);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  padding: 24px 32px;
+  min-width: 340px;
+}
+
+.dropdownColumn ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.dropdownHeading {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-text-heading);
+  white-space: nowrap;
+}
+
+.dropdownColumn li a {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.dropdownColumn li a:hover {
+  color: var(--color-primary);
+}
+
+.ctaWrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cta {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  border-radius: 12px;
+  padding: 12px 26px;
+  font-size: 16px;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.cta:hover {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  border-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .bar {
+    padding: 16px 20px;
+    flex-wrap: wrap;
+  }
+
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dropdown {
+    left: 0;
+    transform: none;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,11 @@
+.frame {
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.frame img {
+  position: absolute;
+  max-width: none;
+  display: block;
+}

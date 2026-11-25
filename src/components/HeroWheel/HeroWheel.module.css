@@ -1,0 +1,191 @@
+/*
+ * The wheel is reproduced at Figma's exact 683 x 683 geometry and then scaled
+ * down as one unit on narrower screens, so every arc, label and plate keeps
+ * its designed relationship.
+ */
+
+.viewport {
+  --stage: 683px;
+  /* the top banner arc sits above the stage origin and must stay visible */
+  --overhang: 40px;
+  --scale: 1;
+  position: relative;
+  width: 100%;
+  /* only the top portion of the wheel is visible, as in the design */
+  height: calc((386px + var(--overhang)) * var(--scale));
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.stage {
+  position: absolute;
+  top: calc(var(--overhang) * var(--scale));
+  left: 50%;
+  width: var(--stage);
+  height: var(--stage);
+  transform: translateX(-50%) scale(var(--scale));
+  transform-origin: top center;
+}
+
+.stage img {
+  display: block;
+  max-width: none;
+}
+
+/* ---- curved banner labels ---- */
+
+.arcRight,
+.arcTopRight,
+.arcTopLeft,
+.arcBottom,
+.arcLeft,
+.arcTop {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arcRight {
+  left: 556.71px;
+  top: 359.69px;
+  width: 206.657px;
+  height: 283.394px;
+}
+
+.arcRight img {
+  width: 263.703px;
+  height: 105.054px;
+  transform: matrix(0.42261824, -0.90630776, 0.90630776, 0.42261824, 0, 0);
+}
+
+.arcTopRight {
+  left: 517.06px;
+  top: 36.71px;
+  width: 222.831px;
+  height: 280.9px;
+}
+
+.arcTopRight img {
+  width: 263.703px;
+  height: 105.054px;
+  transform: matrix(0.5, 0.86602557, -0.86602557, 0.5, 0, 0);
+}
+
+.arcTopLeft {
+  left: -59.61px;
+  top: 45.47px;
+  width: 222.831px;
+  height: 280.9px;
+}
+
+.arcTopLeft img {
+  width: 263.703px;
+  height: 105.054px;
+  transform: matrix(-0.5, 0.86602557, 0.86602557, 0.5, 0, 0);
+}
+
+.arcLeft {
+  left: -63.4px;
+  top: 335.62px;
+  width: 206.657px;
+  height: 283.394px;
+}
+
+.arcLeft img {
+  width: 263.703px;
+  height: 105.054px;
+  transform: matrix(0.42261827, 0.90630782, 0.90630782, -0.42261827, 0, 0);
+}
+
+.arcBottom {
+  left: 50%;
+  top: 642.21px;
+  width: 263.703px;
+  height: 78.05px;
+  transform: translateX(-50%);
+}
+
+.arcBottom img {
+  width: 263.703px;
+  height: 78.05px;
+}
+
+.arcTop {
+  left: 209.65px;
+  top: -34.69px;
+  width: 263.703px;
+  height: 105.054px;
+}
+
+.arcTop img {
+  width: 263.703px;
+  height: 105.054px;
+}
+
+/* ---- decorative ring ---- */
+
+.ring {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--stage);
+  height: var(--stage);
+}
+
+/* ---- plated dishes ---- */
+
+.plates {
+  position: absolute;
+  left: 90.43px;
+  top: 51.02px;
+  width: 502.146px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 90.631px;
+}
+
+.plateRowTop {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+
+.plateRowBottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.plate {
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+  filter: drop-shadow(0px -12.124px 15.155px rgba(0, 0, 0, 0.33));
+}
+
+.plate img {
+  position: absolute;
+  max-width: none;
+}
+
+@media (max-width: 1100px) {
+  .viewport {
+    --scale: 0.85;
+  }
+}
+
+@media (max-width: 860px) {
+  .viewport {
+    --scale: 0.7;
+  }
+}
+
+@media (max-width: 620px) {
+  .viewport {
+    --scale: 0.52;
+  }
+}
